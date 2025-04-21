@@ -6,18 +6,30 @@ import PredictionForm from '../components/PredictionForm';
 import ResultDisplay from '../components/ResultDisplay';
 import FeaturedProperties from '../components/FeaturedProperties';
 
-export default function Home() {
-  const [prediction, setPrediction] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+// Define the type for your form data
+interface PredictionFormData {
+  floors: number;
+  area: number;
+  road_width: number;
+  city_bhaktapur: number;
+  city_kathmandu: number;
+  city_lalitpur: number;
+  road_type_blacktopped: number;
+  road_type_gravelled: number;
+  road_type_soil_stabilized: number;
+}
 
-  const handlePrediction = async (formData) => {
+export default function Home() {
+  const [prediction, setPrediction] = useState<number | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handlePrediction = async (formData: PredictionFormData) => {
     setLoading(true);
     setError(null);
     try {
       console.log('Sending prediction request with data:', formData);
       
-  
       const response = await fetch('/api/predict', {
         method: 'POST',
         headers: {
@@ -26,7 +38,6 @@ export default function Home() {
         body: JSON.stringify(formData)
       });
       
-      
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(`Prediction request failed: ${response.status} - ${errorText}`);
@@ -34,7 +45,7 @@ export default function Home() {
       
       const result = await response.json();
       setPrediction(result.predictedPrice);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Prediction failed:', error);
       setError(`Failed to get prediction: ${error.message}`);
     } finally {
