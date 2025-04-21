@@ -48,7 +48,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <section className="mb-12">
           <h1 className="text-4xl font-bold text-center mb-8 text-indigo-800">
-            Find Your Dream Home's Value
+            Find Your Dream Home&apos;s Value
           </h1>
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
             <PredictionForm onSubmit={handlePrediction} loading={loading} />
