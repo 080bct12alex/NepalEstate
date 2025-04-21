@@ -1,4 +1,4 @@
-// src/app/layout.js
+import { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata = {
@@ -6,8 +6,7 @@ export const metadata = {
   description: 'Modern real estate website with price prediction',
 };
 
-// src/app/layout.tsx
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
@@ -18,8 +17,6 @@ export default function RootLayout({ children }) {
           </div>
         </footer>
       </body>
-
     </html>
   );
 }
-
