@@ -45,9 +45,13 @@ export default function Home() {
       
       const result = await response.json();
       setPrediction(result.predictedPrice);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Prediction failed:', error);
-      setError(`Failed to get prediction: ${error.message}`);
+      if (error instanceof Error) {
+        setError(`Failed to get prediction: ${error.message}`);
+      } else {
+        setError('Failed to get prediction: Unknown error occurred');
+      }
     } finally {
       setLoading(false);
     }
