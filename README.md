@@ -29,6 +29,14 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 
 ---
 
+
+## 📦 Running on Local Device
+
+To run the project locally on your device:
+
+
+---
+
 ## ⚙️ Installation and Setup
 
 ### ✅ Prerequisites
