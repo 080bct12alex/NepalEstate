@@ -25,7 +25,7 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 
 ## 🛠️ Technology Stack
 
-- **Frontend:** Next.js , Tailwind CSS, React
+- **Frontend:** Next.js 
 - **Backend:** Flask,  scikit-learn
 - **Machine Learning:** MLPRegressor (`scikit-learn`)
 
