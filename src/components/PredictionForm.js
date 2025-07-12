@@ -17,7 +17,7 @@ export default function PredictionForm({ onSubmit, loading }) {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    
+
     if (type === 'checkbox') {
       // For city selection, ensure only one city is selected
       if (name.startsWith('city_')) {
@@ -59,13 +59,10 @@ export default function PredictionForm({ onSubmit, loading }) {
     onSubmit(formData);
   };
 
-  
- 
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Property Details</h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Numeric Inputs */}
         <div>
@@ -76,24 +73,26 @@ export default function PredictionForm({ onSubmit, loading }) {
             value={String(formData.floors || 0)}
             onChange={handleChange}
             min="1"
+            step="any" // ✅ allow decimals like 3.5
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             required
           />
         </div>
-        
+
         <div>
           <label className="block text-gray-700 mb-2">Area (Anas)</label>
           <input
             type="number"
             name="area"
             value={String(formData.area || 0)}
-            onChange={handleChange}   
+            onChange={handleChange}
             min="1"
+            step="any" // ✅ allow decimals
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             required
           />
         </div>
-        
+
         <div>
           <label className="block text-gray-700 mb-2">Road Width (ft)</label>
           <input
@@ -102,12 +101,13 @@ export default function PredictionForm({ onSubmit, loading }) {
             value={String(formData.road_width || 0)}
             onChange={handleChange}
             min="1"
+            step="any" // ✅ allow decimals
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             required
           />
         </div>
       </div>
-      
+
       {/* City Selection */}
       <div className="mt-6">
         <h3 className="text-lg font-medium text-gray-800 mb-3">City</h3>
@@ -122,7 +122,7 @@ export default function PredictionForm({ onSubmit, loading }) {
             />
             <label className="ml-2 text-gray-700">Kathmandu</label>
           </div>
-          
+
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -133,7 +133,7 @@ export default function PredictionForm({ onSubmit, loading }) {
             />
             <label className="ml-2 text-gray-700">Bhaktapur</label>
           </div>
-          
+
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -146,7 +146,7 @@ export default function PredictionForm({ onSubmit, loading }) {
           </div>
         </div>
       </div>
-      
+
       {/* Road Type Selection */}
       <div className="mt-6">
         <h3 className="text-lg font-medium text-gray-800 mb-3">Road Type</h3>
@@ -161,7 +161,7 @@ export default function PredictionForm({ onSubmit, loading }) {
             />
             <label className="ml-2 text-gray-700">Blacktopped</label>
           </div>
-          
+
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -172,7 +172,7 @@ export default function PredictionForm({ onSubmit, loading }) {
             />
             <label className="ml-2 text-gray-700">Gravelled</label>
           </div>
-          
+
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -185,7 +185,7 @@ export default function PredictionForm({ onSubmit, loading }) {
           </div>
         </div>
       </div>
-      
+
       <button
         type="submit"
         disabled={loading}
@@ -196,4 +196,3 @@ export default function PredictionForm({ onSubmit, loading }) {
     </form>
   );
 }
-
