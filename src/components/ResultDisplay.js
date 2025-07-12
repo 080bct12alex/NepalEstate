@@ -1,5 +1,11 @@
 export default function ResultDisplay({ prediction }) {
-  // Helper function to format USD value with 'K' suffix
+  const priceMean = 	33447561.18541409; //  Replace with your real trainingdata
+  const priceStd = 17978514.34627327;   
+
+  // Convert standardized prediction back to original price
+  const actualPrice = prediction * priceStd + priceMean;
+
+  // Format USD value with 'K' suffix
   const formatUsd = (value) => {
     return new Intl.NumberFormat('en-US', {
       notation: 'compact',
@@ -9,7 +15,7 @@ export default function ResultDisplay({ prediction }) {
     }).format(value);
   };
 
-  // Helper function to format NPR value
+  // Format NPR value
   const formatNpr = (value) => {
     return new Intl.NumberFormat('en-NP', {
       style: 'currency',
@@ -17,18 +23,10 @@ export default function ResultDisplay({ prediction }) {
     }).format(value);
   };
 
-  // Convert prediction (100k USD multiples) to USD value
-  const usdValue = prediction * 100000; // e.g., 2 becomes 200000 USD
-  
-  // Format USD value with 'K' suffix
+  // Convert to USD and NPR
+  const usdValue = actualPrice / 120; // Assuming 1 USD = 120 NPR
   const formattedUsd = formatUsd(usdValue);
-  
-  // Convert USD to NPR (1 USD = 120 NPR)
-  const exchangeRate = 120;
-  const nprValue = usdValue * exchangeRate;
-  
-  // Format NPR value
-  const formattedNpr = formatNpr(nprValue);
+  const formattedNpr = formatNpr(actualPrice);
 
   return (
     <div className="mt-8 p-6 bg-indigo-50 rounded-lg border border-indigo-100">
