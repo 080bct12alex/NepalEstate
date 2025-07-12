@@ -30,7 +30,7 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 - **Machine Learning:** MLPRegressor (`scikit-learn`)
 
 > 🔗 **GitHub Repositories**   
-> - Backend: [NepalEStates API](https://github.com/080bct12alex/nepalestatesapi)
+> - Backend: [NepalEStates API](https://github.com/080bct12alex/nepalestateapi)
 
 ---
 
