@@ -3,7 +3,7 @@
 A modern web application that predicts real estate prices in Nepal's Kathmandu Valley using machine learning. Built with a **Next.js frontend** and a **Flask backend**, this app provides real-time price estimates based on property details.
 ---
 ### 🌐 Live Website
-👉 **Web App:** [Live Website](https://alexshrestha.vercel.app)
+👉  [Live Website](https://alexshrestha.vercel.app)
 
 ---
 
