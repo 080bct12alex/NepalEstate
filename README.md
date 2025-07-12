@@ -20,9 +20,12 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 
 ## 🛠️ Technology Stack
 
-- **Frontend:** Next.js 15, Tailwind CSS, React
-- **Backend:** Flask, Flask-CORS, scikit-learn
+- **Frontend:** Next.js , Tailwind CSS, React
+- **Backend:** Flask,  scikit-learn
 - **Machine Learning:** MLPRegressor (`scikit-learn`)
+
+> 🔗 **GitHub Repositories**   
+> - Backend: [NepalEStates API](https://github.com/080bct12alex/nepalestatesapi)
 
 ---
 
