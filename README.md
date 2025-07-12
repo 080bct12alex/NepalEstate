@@ -7,6 +7,12 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 
 ---
 
+> 🔗 **Backend GitHub Repositories**   
+> - Backend: [NepalEstates API](https://github.com/080bct12alex/NepalEstate_API)
+
+---
+
+
 ## 🔍 Features
 
 - **Price Prediction:** Predict property prices based on:
