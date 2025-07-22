@@ -1,5 +1,5 @@
 export default function ResultDisplay({ prediction }) {
-  const priceMean = 	33447561.18541409; //  Replace with your real trainingdata
+  const priceMean = 	33447561.18541409; //  Replace with your real training data
   const priceStd = 17978514.34627327;   
 
   // Convert standardized prediction back to original price
@@ -32,10 +32,10 @@ export default function ResultDisplay({ prediction }) {
     <div className="mt-8 p-6 bg-indigo-50 rounded-lg border border-indigo-100">
       <h3 className="text-xl font-semibold text-gray-800 mb-2">Estimated Property Value</h3>
       <div className="text-3xl font-bold text-indigo-700">
-        {formattedUsd} / {formattedNpr}
+        {formattedUsd} / {formattedNpr} 
       </div>
       <p className="mt-2 text-gray-600">
-        This estimate is based on the property details you provided and our machine learning model.
+        This estimate is based on the property details you provided and our machine learning model , trained on data available up to the year 2020.
       </p>
     </div>
   );

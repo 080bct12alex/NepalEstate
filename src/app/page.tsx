@@ -6,7 +6,7 @@ import PredictionForm from '../components/PredictionForm';
 import ResultDisplay from '../components/ResultDisplay';
 import FeaturedProperties from '../components/FeaturedProperties';
 
-// Define the type for your form data
+// Define the type for  form data
 interface PredictionFormData {
   floors: number;
   area: number;

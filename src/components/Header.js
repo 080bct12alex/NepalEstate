@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
               
-            <span className="text-2xl font-bold">NepalEstates</span>
+            <span className="text-2xl font-bold">NepalEstate</span>
           </div>
          
           
