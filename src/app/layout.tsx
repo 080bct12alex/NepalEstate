@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata = {
-  title: 'Real Estate Price Prediction Of Kathmandu Valley',
+  title: 'NepalEstate - Real Estate Price Prediction Of Kathmandu Valley',
   description: 'Modern real estate website with price prediction',
 };
 
