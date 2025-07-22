@@ -8,7 +8,7 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 ---
 
 > 🔗 **Backend GitHub Repository**   
-> - Backend: [NepalEstates API](https://github.com/080bct12alex/NepalEstate_API)
+> - Backend: [NepalEstate API](https://github.com/080bct12alex/NepalEstate_API)
 
 ---
 
@@ -36,7 +36,7 @@ A modern web application that predicts real estate prices in Nepal's Kathmandu V
 - **Machine Learning:** MLPRegressor (`scikit-learn`)
 
 > 🔗 **GitHub Repository**   
-> - Backend: [NepalEstates API](https://github.com/080bct12alex/NepalEstate_API)
+> - Backend: [NepalEstate API](https://github.com/080bct12alex/NepalEstate_API)
 
 ---
 
@@ -60,7 +60,7 @@ To run the project locally on your device:
 
 ```bash
 # Clone the repository
-https://github.com/080bct12alex/NepalEStates.git
+https://github.com/080bct12alex/NepalEState.git
 
 
 # Navigate to Flask server
